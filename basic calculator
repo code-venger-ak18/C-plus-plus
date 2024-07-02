@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    string s;
+    cout << "enter the number 1"<< endl;
+    cin >> a ;
+    cout << "enter the number 2" << endl;
+    cin >> b;
+    cout << "enter the operand(use +,-,*,/)" << endl;
+    int result;
+    cin >> s;
+    if(s == "+")
+    {
+        result= a+b;
+        cout << result << endl;
+    }
+    else if(s == "-")
+    {
+        result=a-b;
+        cout << result<< endl;
+    }
+    else if(s=="*")
+    {
+        result=a*b;
+        cout << result<< endl;
+    }
+    else if(s=="/")
+    {
+        if(b==0)
+        {
+            cout << "division by zero is not possible";
+        }
+        else
+        {
+        result=a/b;
+       int r=a%b;
+        cout << "quotient" << endl << result << endl;
+        cout << "remainder" << r;
+        }
+    }
+    else
+    {
+        cout << "error";
+    }
+    return 0;
+    
+}
