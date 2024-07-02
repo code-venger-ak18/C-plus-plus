@@ -1,0 +1,69 @@
+/*A simple task based Game*/
+#include<iostream>
+#include <chrono>
+#include<thread>
+using namespace std;
+int main()
+{
+    cout << "welcome to the Game" << endl;
+    int arr[3]={3,2,1};
+    for(int i=0;i<=2;i++)
+    {
+        cout << arr[i]<<endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    }
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    cout << "are you ready ?" << endl;
+    cout<< "Y/y for yes,any other button to exit" <<endl;
+    bool respond;
+    string answer;
+    cin >> answer;
+    if(answer == "Y" || answer == "y")
+    {
+    respond = true;
+    cout << "let's go then" << endl;
+    
+    
+int number;
+cout << "choose a number between 1 to 5" << endl;
+cin >> number ;
+cout << "you have chosen " << number << endl;
+cout << "your task is to" << endl;
+
+
+
+switch(number)
+{
+    case 1 : 
+    cout << "meditate"<<endl;
+    break;
+    case 2:
+    cout << "sleep" <<endl;
+    break;
+    case 3:
+    cout << "read a book" << endl;
+    break;
+    case 4:
+    cout << "go for a walk" << endl;
+    break;
+    case 5:
+    cout << "watch a podcast" << endl;
+    break;
+    default:
+    cout << "error" <<endl;
+    break ;
+}
+}
+    else
+    {
+    respond = false;
+    
+    }
+
+
+
+    
+    
+    return 0;
+    
+}
