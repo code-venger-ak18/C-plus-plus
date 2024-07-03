@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout << "WELCOME !TO THE DOLLAR AND RUPEE CURRENCY CONVERTOR" << endl ;//welcome message
+    cout << "If you want to convert dollar to rupee press 1,2 for converting rupee to dollar" <<endl;
+    int choice;
+    float dollar;
+    float rupee;
+    cin >> choice;
+    switch(choice)
+    {
+    float result;
+        case 1:
+        cout<<"Converting Dollar to Rupee"<<endl;
+        cout<< "Enter the amount in Dollar" <<endl;
+        
+        cin >> dollar ;
+        result=dollar*83.51;
+        cout << result << "Rupees" << endl;
+        break;
+        
+        case 2:
+        cout<<"Converting Rupee to Dollar"<<endl;
+        cout<<"Enter the amount in Rupee"<<endl;
+        
+        cin >> rupee ;
+        result=rupee/83.51;
+        cout << result << "Dollars " << endl;
+        break;
+        
+        default :
+        cout << "Error ! please press 1 for Converting Dollar to Rupee or 2 for Converting Rupee to Dollar";
+        break;
+        
+        
+        
+        
+    }
+    return 0;
+}
