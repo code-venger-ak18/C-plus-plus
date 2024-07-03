@@ -1,0 +1,134 @@
+#include<iostream>
+#include<cstdlib>
+#include<chrono>
+#include<thread>
+#include<string>
+#include<ctime>
+using namespace std;
+
+int main()
+{
+    srand(time(0));
+    cout << "Welcome to rock,paper and scissors" << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    int ps=0;
+    int cs=0;
+    for(int i=1;i<=3;i++)
+    {
+        cout << "round " << i << endl;
+        cout << "press - r for rock,s for scissors,p for paper"<<endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        
+    string s;
+    cin >> s;
+    
+    
+    if(s=="s"||s=="r"||s=="p")
+    {
+        
+        int engineMove = rand() % 3; 
+        if(engineMove == 0)
+        {
+            cout << "your move was: "<< endl << s << endl;
+            cout << "engine plays rock" << endl;
+            if(s=="r")
+            {
+                cout << "tie" <<endl;
+                
+               
+            }
+            else if(s=="p")
+            {
+                cout << "you win!" << endl;
+                ps++;
+               
+            }
+            else if (s=="s")
+            {
+                cout << "you lose" << endl;
+                cs++;
+                
+            }
+        }
+        else if(engineMove == 1)
+        {
+            cout << "your move was: "<< endl << s << endl;
+            cout << "engine plays paper" << endl;
+            if(s=="r")
+            {
+                cout << "you lose" <<endl;
+                cs++;
+            }
+            else if(s=="p")
+            {
+                cout << "tie" << endl;
+                
+            }
+            else if (s=="s")
+            {
+                cout << "you win!" << endl;
+                ps++;
+                
+            }
+        }
+        else if(engineMove == 2)
+        {
+            cout << "your move was: "<< endl << s << endl;
+            cout << "engine plays scissors" << endl;
+            if(s=="s")
+            {
+                cout << "tie!" <<endl;
+                
+            }
+            else if(s=="p")
+            {
+                cout << "you lose" << endl;
+                cs++;
+                
+            }
+            else if(s=="r")
+            {
+                cout << "you win!" << endl;
+                ps++;
+                
+            }
+           
+        }
+        
+        
+            
+        
+    }
+    else
+        {
+            cout << "error !,press - r for rock,s for scissors,p for paper"<<endl;
+            i--;
+            continue;
+        }
+        cout << " " << endl;
+        cout << "engine's score " << cs <<endl;
+    cout << "your score " << ps <<endl;
+    
+    }
+    cout << " " << endl;
+    cout<< "final scores "<<endl << "engine's score " << endl << cs << endl <<"your score "<<endl <<ps <<endl;
+    if(cs > ps)
+    {
+        cout << "engine wins!" << endl;
+        
+    }
+    else if(ps>cs)
+    {
+         cout << "you win!" << endl;
+    }
+    else
+    {
+        cout << "tie" <<endl;
+    }
+    
+    
+    
+    return 0;
+    
+    
+} how about now
